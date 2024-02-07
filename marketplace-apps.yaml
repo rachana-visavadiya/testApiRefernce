@@ -8,7 +8,7 @@ info:
     email: contact@rocket.chat
   description: Marketplace Apps
 servers:
-  - url: 'http://localhost:3000'
+  - url: 'https://writing-demo.dev.rocket.chat'
 paths:
   '/api/apps/public/{app-id}/incoming':
     parameters:
@@ -71,7 +71,6 @@ paths:
       description: |- 
         Close a chat session or perform handover. The appropriate endpoint URL including the `appId` for  closing chat or perfoming handover in your workspace is displayed under **App Info > Details > APIs > POST incoming** section of the Rasa app.
         !!!EDIT TEST!!!HELLO WORLD!!!
-        !!!EDIT TEST 2 WITH CI/CD!!!
         
         ### Changelog
         | Version      | Description |
