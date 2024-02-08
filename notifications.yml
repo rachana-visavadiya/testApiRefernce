@@ -101,7 +101,7 @@ paths:
                 Success Example:
                   value:
                     banners: []
-                    success: truee
+                    success: true
         '400':
           description: Bad Request
           content:
