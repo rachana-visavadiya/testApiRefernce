@@ -42,8 +42,9 @@ paths:
                       properties: {}
                   success:
                     type: boolean
-                x-examples:
-                  Example 1:
+              examples:
+                Example 1:
+                  value:
                     banners: []
                     success: true
         '400':
@@ -57,10 +58,6 @@ paths:
                     type: boolean
                   error:
                     type: string
-                x-examples:
-                  Example 1:
-                    success: false
-                    error: 'Match error: Missing key ''platform'''
               examples:
                 Example 1:
                   value:
@@ -100,19 +97,11 @@ paths:
                       properties: {}
                   success:
                     type: boolean
-                x-examples:
-                  Example 1:
-                    banners: []
-                    success: true
               examples:
                 Success Example:
                   value:
-                    accounts:
-                      - _id: P3Gru7ocFCd4vpKEs
-                        server_url: 'http://localhost:8080/remote.php/webdav/'
-                        username: admin
-                        name: Webdav account
-                    success: true
+                    banners: []
+                    success: truee
         '400':
           description: Bad Request
           content:
@@ -124,10 +113,6 @@ paths:
                     type: boolean
                   error:
                     type: string
-                x-examples:
-                  Example 1:
-                    success: false
-                    error: 'Match error: Missing key ''platform'''
               examples:
                 Example 1:
                   value:
@@ -167,10 +152,6 @@ paths:
                     type: boolean
                   error:
                     type: string
-                x-examples:
-                  Example 1:
-                    success: false
-                    error: 'Match error: Missing key ''bannerId'''
               examples:
                 Example 1:
                   value:
@@ -327,8 +308,9 @@ paths:
                                 type: string
                   success:
                     type: boolean
-                x-examples:
-                  Example 1:
+              examples:
+                Success Example:
+                  value:
                     data:
                       message:
                         _id: WkbwSntxt8D3jLp8G
@@ -375,15 +357,6 @@ paths:
                         apn:
                           category: MESSAGE
                     success: true
-              examples:
-                Success Example:
-                  value:
-                    accounts:
-                      - _id: P3Gru7ocFCd4vpKEs
-                        server_url: 'http://localhost:8080/remote.php/webdav/'
-                        username: admin
-                        name: Webdav account
-                    success: true
         '400':
           description: Bad Request
           content:
@@ -395,10 +368,6 @@ paths:
                     type: boolean
                   error:
                     type: string
-                x-examples:
-                  Example 1:
-                    success: false
-                    error: 'Match error: Missing key ''id'''
               examples:
                 Example 1:
                   value:
@@ -406,7 +375,12 @@ paths:
                     error: 'Match error: Missing key ''id'''
         '401':
           $ref: '#/components/responses/authorizationError'
-      description: "Get push notification for a message.\r\n\r\n### Changelog\r\n| Version      | Description |\r\n| ---------------- | ------------|\r\n|3.5.0            | Added       |"
+      description: |-
+        Get push notification for a message.
+        ### Changelog
+        | Version      | Description |
+        | ---------------- | ------------|
+        |3.5.0            | Added       |
       parameters:
         - $ref: '#/components/parameters/X-Auth-Token'
         - $ref: '#/components/parameters/X-User-Id'
@@ -440,11 +414,6 @@ paths:
                     type: string
                   errorType:
                     type: string
-                x-examples:
-                  Example 1:
-                    success: false
-                    error: 'The required "token" body param is missing or invalid. [error-token-param-not-valid]'
-                    errorType: error-token-param-not-valid
               examples:
                 Example 1:
                   value:
@@ -453,7 +422,12 @@ paths:
                     errorType: error-token-param-not-valid
         '401':
           $ref: '#/components/responses/authorizationError'
-      description: "Removes push token from the workspace.\r\n\r\n### Changelog\r\n| Version      | Description |\r\n| ---------------- | ------------|\r\n|0.60.0            | Added       |"
+      description: |-
+        Removes push token from the workspace.
+        ### Changelog
+        | Version      | Description |
+        | ---------------- | ------------|
+        |0.60.0            | Added       |
       parameters:
         - $ref: '#/components/parameters/X-Auth-Token'
         - $ref: '#/components/parameters/X-User-Id'
@@ -504,18 +478,6 @@ paths:
                         type: string
                   success:
                     type: boolean
-                x-examples:
-                  Example 1:
-                    result:
-                      token:
-                        gcm: TOKEN
-                      appName: RocketAPP
-                      userId: 52d5Rw8LT3TeDa59Z
-                      enabled: true
-                      createdAt: '2018-09-11T18:22:55.006Z'
-                      updatedAt: '2018-09-11T18:22:55.006Z'
-                      _id: DMMjKG2hFoLvM2hk7
-                    success: true
               examples:
                 Success Example:
                   value:
@@ -542,11 +504,6 @@ paths:
                     type: string
                   errorType:
                     type: string
-                x-examples:
-                  Example 1:
-                    success: false
-                    error: 'The required "type" body param is missing or invalid. [error-type-param-not-valid]'
-                    errorType: error-type-param-not-valid
               examples:
                 Example 1:
                   value:
@@ -590,7 +547,11 @@ paths:
                   type: gcm
                   value: TOKEN
                   appName: MyApp
-      description: "### Changelog\r\n| Version      | Description |\r\n| ---------------- | ------------|\r\n|0.60.0            | Added       |"
+      description: |-
+        ### Changelog
+        | Version      | Description |
+        | ---------------- | ------------|
+        |0.60.0            | Added       |
 components:
   parameters:
     X-Auth-Token:
@@ -656,10 +617,6 @@ components:
                 type: string
               message:
                 type: string
-            x-examples:
-              Example 1:
-                status: error
-                message: You must be logged in to do this.
           examples:
             Authorization Error:
               value:
@@ -674,9 +631,6 @@ components:
             properties:
               success:
                 type: boolean
-            x-examples:
-              Example 1:
-                success: true
           examples:
             Example 1:
               value:
