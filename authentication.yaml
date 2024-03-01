@@ -57,7 +57,6 @@ info:
       "details": {
         "method": "email"
       }
-   }
     ```
     ### Handling 2FA Method Errors
       It's important to note the  required TOTP **method** returned in the error response when making requests that require 2FA.
