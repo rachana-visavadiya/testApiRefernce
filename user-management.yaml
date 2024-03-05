@@ -15,7 +15,7 @@ paths:
     get:
       tags:
         - Permissions
-      summary: List all permissions
+      summary: List all permissions <test update>
       description: |-
         Returns all permissions from the workspace.
         
