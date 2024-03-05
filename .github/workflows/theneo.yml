@@ -18,7 +18,9 @@ jobs:
       - name: Update Documentation on Theneo
         uses: Theneo-Inc/api-documentation@1.7.0
         with:
-          FILE_PATH: doc/api.yml
+          FILE_PATH:
+            - /authentication.yaml
+            - /user-management.yaml
           PROJECT_KEY: test-api
           SECRET: 50657846-aa55-447b-a90a-ffd870975af3
           IMPORT_OPTION: merge
