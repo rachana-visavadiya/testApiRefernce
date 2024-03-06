@@ -17,7 +17,7 @@ paths:
         - Permissions
       summary: List all permissions
       description: |-
-        Returns all permissions from the workspace. <test hello world>
+        Returns all permissions from the workspace. <test hello world!!>
         
         ### Changelog
         | Version      | Description |
